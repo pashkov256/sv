@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<div class="types-grid">
+  <div class="type-block toyt">ТОУТ</div>
+  <div class="type-block backpacks">РЮКЗАКИ</div>
+  <div class="type-block belts">ПОЯСНЫЕ</div>
+  <div class="type-block rolltop">РОЛЛТОП</div>
+  <div class="type-block cross">КРОСС-БОДИ</div>
+  <div class="type-block all">Смотреть всю коллекцию</div>
+</div>
+
+<style>
+  /* Сетка */
+  .types-grid {
+    display: grid
+  ;
+    grid-template-columns: 262px 262px 262px 262px;
+    grid-template-rows: 263px 260px;
+    gap: 30px;
+  }
+
+  /* "ТОУТ" растягивается на две строки */
+  .toyt {
+    grid-row: span 2; /* Занимает обе строки */
+    grid-column: 1; /* Находится в первой колонке */
+    background-color: #eaeaea;
+    text-align: center;
+    padding: 16px;
+  }
+
+  /* Верхний ряд: РЮКЗАКИ, ПОЯСНЫЕ, РОЛЛТОП */
+  .backpacks, .belts, .rolltop {
+    background-color: #eaeaea;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .type-block{
+          background-color: #eaeaea;
+    text-align: center;
+
+  }
+
+  .backpacks {
+    grid-column: 2; 
+  }
+
+  .belts {
+    grid-column: 3;
+  }
+
+  .rolltop {
+    grid-column: 4;
+  }
+
+  .cross {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+    background-color: #f0c0c0;
+    text-align: center;
+    width: 457px;
+    margin-right: auto;
+  }
+  .all {
+    grid-row: 2;
+    grid-column: 2 / 3 span;
+    background-color: #d0d0f0;
+    text-align: center;
+
+    width: 360px;
+    margin-left: auto;
+  }
+</style>
+
+
+
+</body>
+</html>
